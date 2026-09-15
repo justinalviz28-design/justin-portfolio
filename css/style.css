@@ -166,15 +166,17 @@ main{ position: relative; z-index: 1; }
 .chip span{ color: var(--accent-bright); }
 .chip:hover{ border-color: var(--accent-bright); color: var(--accent-bright); }
 
-.tag-list{
-  list-style: none; margin: 4px 0 0 0; padding: 0;
-  display: flex; flex-wrap: wrap; gap: 10px; position: relative; z-index: 1;
+.ghl-examples{
+  margin: 8px 0 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+  background: var(--line-strong); border: 1px solid var(--line-strong); border-radius: 14px;
+  overflow: hidden; position: relative; z-index: 1;
 }
-.tag-list li{
-  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.03em;
-  border: 1px solid var(--line-strong); border-radius: 999px; padding: 7px 14px;
-  background: rgba(11,11,18,0.55);
+.ghl-example{ background: rgba(11,11,18,0.72); backdrop-filter: blur(2px); padding: 20px 22px; }
+.ghl-example dt{
+  font-family: var(--font-display); font-weight: 700; font-size: 0.98rem; color: var(--accent-bright);
+  margin: 0 0 8px 0;
 }
+.ghl-example dd{ margin: 0; font-size: 0.9rem; color: var(--ink); line-height: 1.5; }
 
 .project-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .project-card{
@@ -212,8 +214,7 @@ main{ position: relative; z-index: 1; }
   0%, 100%{ r: 4; opacity: 0.65; }
   50%{ r: 7; opacity: 1; }
 }
-.portfolio-ghl .portfolio-head,
-.portfolio-ghl .tag-list{ position: relative; z-index: 1; }
+.portfolio-ghl .portfolio-head{ position: relative; z-index: 1; }
 
 /* ---------- Timeline ---------- */
 .timeline{ margin-top: 36px; display: flex; flex-direction: column; }
@@ -269,6 +270,7 @@ main{ position: relative; z-index: 1; }
   .hero-stats{ grid-template-columns: 1fr; gap: 18px; }
   .contact-grid{ grid-template-columns: repeat(2, 1fr); }
   .project-grid{ grid-template-columns: repeat(2, 1fr); }
+  .ghl-examples{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px){
