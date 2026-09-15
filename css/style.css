@@ -134,10 +134,10 @@ main{ position: relative; z-index: 1; }
 .btn:active{ transform: scale(0.97); }
 
 .hero-stats{
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  display: flex; flex-wrap: wrap; gap: 28px 24px;
   padding-top: 36px; border-top: 1px solid var(--line);
 }
-.stat{ display: flex; flex-direction: column; gap: 6px; }
+.stat{ flex: 1 1 150px; min-width: 130px; display: flex; flex-direction: column; gap: 6px; }
 .stat-num{
   font-family: var(--font-display); font-weight: 700; font-size: clamp(1.25rem, 1.7vw, 1.6rem);
   line-height: 1.15; color: var(--ink); font-variant-numeric: tabular-nums;
@@ -286,7 +286,6 @@ main{ position: relative; z-index: 1; }
 @media (max-width: 900px){
   .about-grid{ grid-template-columns: 1fr; }
   .service-grid{ grid-template-columns: repeat(2, 1fr); }
-  .hero-stats{ grid-template-columns: repeat(2, 1fr); gap: 22px 18px; }
   .hero-grid{ grid-template-columns: 1fr; }
   .hero-photo{ order: -1; }
   .hero-photo-frame{ width: min(100%, 260px); }
@@ -318,5 +317,5 @@ main{ position: relative; z-index: 1; }
   .service-grid{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
   .project-grid{ grid-template-columns: 1fr; }
-  .hero-stats{ grid-template-columns: 1fr; gap: 18px; }
+  .stat{ flex-basis: 42%; }
 }
